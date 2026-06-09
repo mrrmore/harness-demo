@@ -1,0 +1,45 @@
+pipeline:
+  name: harness-demo-test1
+  identifier: harnessdemotest1
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Arm64
+          runtime:
+            type: Docker
+            spec:
+              harnessImageConnectorRef: account.harnessImage
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Execute Script
+                  identifier: Execute_Script
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: ubuntu:latest
+                    shell: Sh
+                    command: |-
+                      chmod +x hello.sh
+                      ./hello.sh
+  properties:
+    ci:
+      codebase:
+        connectorRef: mrrmore
+        repoName: harness-demo
+        build: <+input>
