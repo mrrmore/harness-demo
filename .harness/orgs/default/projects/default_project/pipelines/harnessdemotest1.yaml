@@ -33,7 +33,7 @@ pipeline:
                   spec:
                     connectorRef: account.harnessImage
                     image: ubuntu:latest
-                    shell: Sh
+                    shell: Bash
                     command: |-
                       chmod +x hello.sh
                       ./hello.sh
