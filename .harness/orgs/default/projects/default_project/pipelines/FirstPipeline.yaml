@@ -36,5 +36,7 @@ pipeline:
                   name: Run_1
                   identifier: Run_1
                   spec:
-                    shell: Sh
-                    command: bash Hello.sh
+                    shell: Bash
+                    command: |-
+                      chmod 777 linux.sh
+                      bash linux.sh
