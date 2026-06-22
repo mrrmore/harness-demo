@@ -4,16 +4,10 @@ pipeline:
   projectIdentifier: Project1
   orgIdentifier: default
   tags: {}
-  properties:
-    ci:
-      codebase:
-        connectorRef: account.Github_OAuth_1782151092878
-        repoName: harness-demo
-        build: <+input>
   stages:
     - stage:
-        name: build1
-        identifier: build1
+        name: buid1
+        identifier: buid1
         description: ""
         type: CI
         spec:
@@ -38,3 +32,9 @@ pipeline:
                   spec:
                     shell: Sh
                     command: ls -lrt
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1782151062350
+        repoName: harness-demo
+        build: <+input>
