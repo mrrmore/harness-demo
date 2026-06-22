@@ -24,12 +24,11 @@ pipeline:
           buildIntelligence:
             enabled: true
           platform:
-            os: Linux
+            os: Windows
             arch: Amd64
           runtime:
-            type: Docker
-            spec:
-              harnessImageConnectorRef: account.harnessImage
+            type: Cloud
+            spec: {}
           execution:
             steps:
               - step:
