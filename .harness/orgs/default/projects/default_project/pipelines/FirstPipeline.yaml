@@ -37,6 +37,4 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Bash
-                    command: |-
-                      chmod 777 linux.sh
-                      bash linux.sh
+                    command: ls -lrt
