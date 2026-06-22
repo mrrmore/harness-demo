@@ -39,4 +39,4 @@ pipeline:
                     shell: Bash
                     command: |-
                       chmod +x Hello.sh
-                      sh Hello.sh
+                      bash Hello.sh
