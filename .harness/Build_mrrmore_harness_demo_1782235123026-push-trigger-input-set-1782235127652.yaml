@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_mrrmore_harness_demo_1782235123026-push-trigger-input-set
+  identifier: Build_mrrmore_harness_demo_1782235123026pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_mrrmore_harness_demo_1782235123026
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
